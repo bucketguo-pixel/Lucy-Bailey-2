@@ -7,8 +7,11 @@ export function Footer() {
       <Container>
         <div className="flex flex-col gap-2 border-t light-line pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} {profile.person.name}. All rights reserved.</div>
-          <div>Last updated: September 18, 2025
-        </div>
+          <div>Last updated: {new Date(2025, 8, 18).toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+})}</div>
       </Container>
     </footer>
   );
